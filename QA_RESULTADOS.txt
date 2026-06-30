@@ -1,0 +1,17 @@
+QA HidroSed v3.8.3
+
+Base usada: HidroSed_SedGran_v3_8_2_Casos_Modelacion_QA.zip, que contiene la línea multifuente v3.8.1 y las imágenes referenciales de casos. La mejora fue revisada y corregida contra el prompt correcto Prompt_Mejoras_HidroSed_Casos_Cuenca_Eje_HECRAS_KMZ.docx.
+
+Controles ejecutados:
+- python -m compileall . : OK
+- pytest -q : 49 pruebas aprobadas
+- Pruebas nuevas v3.8.3 : 6 aprobadas
+- Verificación plantilla Excel HEC-RAS : OK
+- Verificación KMZ eje sin eje manual : OK
+- Verificación KMZ unificado con estado parcial : OK
+- Verificación carga cuenca corregida KML : OK
+- Verificación casos y alertas topográficas : OK
+
+Limitación del sandbox:
+- Streamlit no está instalado en este contenedor, por lo que no se pudo levantar visualmente `streamlit run app.py` aquí.
+- La compilación, pruebas de módulos, exportadores KMZ, plantilla HEC-RAS y lógica de enlace interno fueron verificadas.

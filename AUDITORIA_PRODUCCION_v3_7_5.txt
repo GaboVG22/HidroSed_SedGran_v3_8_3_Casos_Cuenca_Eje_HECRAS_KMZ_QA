@@ -1,0 +1,29 @@
+HidroSed SedGran v3.7.5 Intermedias-Overflow
+Auditoría previa a entrega
+
+1) compileall completo
+- Ejecutado sobre toda la carpeta app.
+- Resultado: OK.
+
+2) Revisión funcional / humo
+- test_supreme_internal.py ejecutado: 10/10 pruebas OK.
+- Prueba adicional de módulos nuevos:
+  * compute_section_relief_stats: OK
+  * generate_intermediate_sections: OK
+  * detect_overflow_sections: OK
+
+3) Mejoras incorporadas en esta versión
+- QA geométrico adicional para detectar secciones aplanadas.
+- Generación semiautomática de secciones intermedias en tramos seleccionados.
+- Plantilla hidráulica tipo HEC-RAS por sección con yn, yc, velocidad y energía.
+- Detección y despliegue de secciones con desborde.
+- Perfil longitudinal hidráulico con modos:
+  * Lámina de agua y desborde
+  * yn / yc / energía
+  * Velocidad / Froude
+  * Tensión de corte / energía
+- Marcadores de desborde en perfil 3D.
+- Corrección preventiva: import re agregado en app.py.
+
+4) Observación técnica
+- Cuando se regeneran secciones intermedias, la app limpia los resultados hidráulicos previos para forzar recálculo consistente con la nueva geometría.
